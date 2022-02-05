@@ -26,3 +26,5 @@ Route::post('/orders', [App\Http\Controllers\OrderController::class, 'store']);
 Route::get('/orders', [App\Http\Controllers\OrderController::class, 'findAll']);
 Route::patch('/orders/{order}', [App\Http\Controllers\OrderController::class, 'update']);
 Route::delete('/orders/{order}', [App\Http\Controllers\OrderController::class, 'delete']);
+
+Route::get('/customers', [App\Http\Controllers\CustomerController::class, 'findAll']);

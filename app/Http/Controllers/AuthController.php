@@ -12,10 +12,8 @@ class AuthController extends BaseController
     {
         $authheader = \request()->header('Authorization'); //basic auth
         $keyauth = substr($authheader, 6); //hilangkan txt basic
-
         $plainauth = base64_decode($keyauth); //decode text info login
         $tokenauth = explode(":", $plainauth);
-        dd($authheader, $keyauth, $plainauth, $tokenauth);
         $email = $tokenauth[0];
         $pass = $tokenauth[1];
 
